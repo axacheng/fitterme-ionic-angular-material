@@ -1,0 +1,26 @@
+{
+  "generator-m-ionic": {
+    "answers": {
+      "appName": "FitterMe",
+      "appId": "io.fitterme.mobile",
+      "ionicCss": false,
+      "bowerPackages": [
+        "angular-dynamic-locale#~0.1.27",
+        "angular-translate#~2.7.2",
+        "angular-translate-loader-static-files#~2.7.2",
+        "angular-localForage#~1.2.3"
+      ],
+      "platforms": [
+        "ios",
+        "android"
+      ],
+      "plugins": [
+        "cordova-plugin-device",
+        "cordova-plugin-dialogs",
+        "cordova-plugin-inappbrowser",
+        "com.ionic.keyboard"
+      ],
+      "appModule": "FitterMe"
+    }
+  }
+}
