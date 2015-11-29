@@ -1,0 +1,20 @@
+<div class="jumbotron">
+  <div class="menu" hide-gt-md ng-controller="SideNavCtrl">
+    <md-button class="md-icon-button" ng-click="goBack()">
+      <md-icon><i class="material-icons burgmenu">arrow_back</i></md-icon>
+    </md-button>
+  </div>
+  <div class="mtbm10">
+    <h3>{{ place }} </h3>
+  </div>
+  <div class="search">
+    <md-button class="md-icon-button" ng-click="toggleSearch()">
+      <md-icon ><i class="material-icons burgmenu">search</i></md-icon>
+    </md-button>
+  </div>
+</div>
+<div flex ng-cloak class="pa10">
+   <div layout="row" layout-wrap>
+      {{ place }}
+   </div>
+</div>

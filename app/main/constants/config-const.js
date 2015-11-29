@@ -1,5 +1,5 @@
 'use strict';
-angular.module('FitterMe')
+angular.module('piknikoApp')
 .constant('Config', {
 
   // gulp environment: injects environment vars

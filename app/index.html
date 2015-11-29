@@ -5,20 +5,17 @@
     <meta name="description" content="">
     <!-- ionic meta tags -->
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
     <!-- custom meta tags -->
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <title>FitterMe</title>
+    <title>Pikniko</title>
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
-    <link rel="stylesheet" href="bower_components/FroalaWysiwygEditor/css/froala_editor.min.css" />
-    <link rel="stylesheet" href="bower_components/FroalaWysiwygEditor/css/froala_content.min.css" />
-    <link rel="stylesheet" href="bower_components/FroalaWysiwygEditor/css/froala_style.min.css" />
     <link rel="stylesheet" href="bower_components/angular-material/angular-material.css" />
-    <link rel="stylesheet" href="bower_components/mdi/css/materialdesignicons.css" />
-    <link rel="stylesheet" href="bower_components/mdi/css/materialdesignicons.min.css" />
     <link rel="stylesheet" href="bower_components/mdPickers/dist/mdPickers.min.css" />
     <!-- endbower -->
     <!-- endbuild -->
@@ -29,46 +26,71 @@
     <!-- endinject -->
     <!-- endbuild -->
   </head>
-  <body ng-app="FitterMe">
+  <body ng-app="piknikoApp">
 
     <!-- the nav bar will be updated as we navigate between views -->
     <!-- <ion-nav-bar> can be removed when using sidemenu (contained in menu.html) -->
-    <ion-nav-bar class="bar-energized">
+<!--     <ion-nav-bar class="bar-energized">
       <ion-nav-back-button></ion-nav-back-button>
-    </ion-nav-bar>
+    </ion-nav-bar> -->
     <!-- the current view will be rendered in the <ion-nav-view> directive -->
-    <ion-nav-view></ion-nav-view>
-
+    <!-- <ion-nav-view></ion-nav-view> -->
+    <div layout="column" class="sidemenu" ng-cloak>
+      <section layout="row" flex>
+        <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')">
+          <md-toolbar class="md-theme">
+            <img src="https://placeimg.com/100/100/any" class="usericon md-whiteframe-15dp" alt="" />
+            <div class="center">
+              <h3>Picniquer's Name</h3>
+            </div>
+          </md-toolbar>
+          <md-content layout-padding>
+            <md-menu-content>
+              <md-menu-item>
+                <md-button>
+                  <md-icon><i class="material-icons">person_pin_circle</i></md-icon>
+                  Checked In
+                </md-button>
+              </md-menu-item>
+              <md-menu-item>
+                <md-button>
+                  <md-icon><i class="material-icons">favorites</i></md-icon>
+                  Wanna Go
+                </md-button>
+              </md-menu-item>
+              <md-menu-item>
+                <md-button>
+                  <md-icon><i class="material-icons">notifications</i></md-icon>
+                  Notification
+                </md-button>
+              </md-menu-item>
+              <md-menu-item>
+                <md-button ui-sref="home">
+                  <md-icon><i class="material-icons">wallpaper</i></md-icon>
+                  Find Place
+                </md-button>
+              </md-menu-item>
+            </md-menu-content>
+          </md-content>
+        </md-sidenav>
+        <md-content flex>
+          <div layout="column" layout-fill  ui-view="pageContent">
+          </div>
+          <div flex></div>
+        </md-content>
+      </section>
+    </div>
     <!-- will be a 404 during development -->
     <script src="cordova.js"></script>
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
-    <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-animate/angular-animate.js"></script>
     <script src="bower_components/angular-dynamic-locale/src/tmhDynamicLocale.js"></script>
-    <script src="bower_components/FroalaWysiwygEditor/js/froala_editor.min.js"></script>
-    <script src="bower_components/FroalaWysiwygEditor/js/plugins/block_styles.min.js"></script>
-    <script src="bower_components/FroalaWysiwygEditor/js/plugins/char_counter.min.js"></script>
-    <script src="bower_components/FroalaWysiwygEditor/js/plugins/colors.min.js"></script>
-    <script src="bower_components/FroalaWysiwygEditor/js/plugins/entities.min.js"></script>
-    <script src="bower_components/FroalaWysiwygEditor/js/plugins/file_upload.min.js"></script>
-    <script src="bower_components/FroalaWysiwygEditor/js/plugins/font_family.min.js"></script>
-    <script src="bower_components/FroalaWysiwygEditor/js/plugins/font_size.min.js"></script>
-    <script src="bower_components/FroalaWysiwygEditor/js/plugins/fullscreen.min.js"></script>
-    <script src="bower_components/FroalaWysiwygEditor/js/plugins/inline_styles.min.js"></script>
-    <script src="bower_components/FroalaWysiwygEditor/js/plugins/lists.min.js"></script>
-    <script src="bower_components/FroalaWysiwygEditor/js/plugins/media_manager.min.js"></script>
-    <script src="bower_components/FroalaWysiwygEditor/js/plugins/tables.min.js"></script>
-    <script src="bower_components/FroalaWysiwygEditor/js/plugins/urls.min.js"></script>
-    <script src="bower_components/FroalaWysiwygEditor/js/plugins/video.min.js"></script>
-    <script src="bower_components/angular-froala/src/angular-froala.js"></script>
     <script src="bower_components/angular-jwt/dist/angular-jwt.js"></script>
     <script src="bower_components/localforage/dist/localforage.js"></script>
     <script src="bower_components/angular-localForage/dist/angular-localForage.js"></script>
-    <script src="bower_components/angular-aria/angular-aria.js"></script>
-    <script src="bower_components/angular-material/angular-material.js"></script>
     <script src="bower_components/angular-resource/angular-resource.js"></script>
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
     <script src="bower_components/angular-translate/angular-translate.js"></script>
@@ -76,6 +98,8 @@
     <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
     <script src="bower_components/ionic/release/js/ionic.js"></script>
     <script src="bower_components/ionic/release/js/ionic-angular.js"></script>
+    <script src="bower_components/angular-aria/angular-aria.js"></script>
+    <script src="bower_components/angular-material/angular-material.js"></script>
     <script src="bower_components/moment/moment.js"></script>
     <script src="bower_components/mdPickers/dist/mdPickers.min.js"></script>
     <script src="bower_components/ngCordova/dist/ng-cordova.js"></script>

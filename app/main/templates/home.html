@@ -1,0 +1,34 @@
+<div class="jumbotron">
+  <div class="menu" hide-gt-md ng-controller="SideNavCtrl">
+    <md-button class="md-icon-button" ng-click="toggleLeft()">
+      <md-icon ><i class="material-icons burgmenu">menu</i></md-icon>
+    </md-button>
+  </div>
+  <div class="mtbm10">
+    <h3>Bon Picnique!</h3>
+    <p class="lead">
+      <img src="https://s-media-cache-ak0.pinimg.com/avatars/picnicgourmet_1402068372_140.jpg" alt="picniquer logo"><br>
+      start from a good place !
+    </p>
+  </div>
+  <div class="search">
+    <md-button class="md-icon-button" ng-click="toggleSearch()">
+      <md-icon ><i class="material-icons burgmenu">search</i></md-icon>
+    </md-button>
+  </div>
+</div>
+<div flex ng-cloak class="pa10">
+   <div layout="row" layout-wrap>
+      <div flex-gt-md="25" flex-md="50" flex-sm="100" ng-repeat="c in cities">
+        <md-card class="pointer" ng-click="gothecity(c)">
+          <div class="cityimage">
+            <img ng-src="{{c.image}}" class="md-card-image cityimage-inner" alt="{{c.city}}">
+            <div class="citytxtbg">
+              <h2>{{c.city}}</h2>
+            </div>
+          </div>
+
+        </md-card>
+      </div>
+   </div>
+</div>

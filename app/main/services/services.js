@@ -1,5 +1,5 @@
 'use strict';
-angular.module('FitterMe')
+angular.module('piknikoApp')
 .service('Main', function ($log, $timeout) {
 
   $log.log('Hello from your Service: Main in module main');

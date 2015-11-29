@@ -1,5 +1,5 @@
 'use strict';
-angular.module('FitterMe')
+angular.module('piknikoApp')
 .controller('DebugCtrl', function ($log, $scope, ChangelogService, Config, Main) {
 
   $log.log('Hello from your Controller: DebugCtrl in module main:. This is your controller:');
