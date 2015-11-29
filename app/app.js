@@ -7,7 +7,6 @@ angular.module('piknikoApp', [
   'ngResource',
   'ngAnimate',
   'ngMaterial',
-  'mdPickers',
   'angular-jwt',
   // TODO: load other modules selected during generation
 ])

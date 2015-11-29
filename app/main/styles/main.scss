@@ -16,7 +16,7 @@ $royal:                           #8a6de9 !default;
 $dark:                            #444 !default;
 $amber: 						  #FFC107 !default;
 $earth:                           #706662 !default;
-$alpha:                           0.5 !default;
+$alpha:                           0.8 !default;
 
 // The path for our ionicons font files, relative to the built & temporary main.css
 $ionicons-font-path: "../assets/fonts" !default;
@@ -169,6 +169,7 @@ body {
 	position: absolute;
 	top: 0;
 	right: 0;
+  z-index: 99;
 }
 
 .fav {
