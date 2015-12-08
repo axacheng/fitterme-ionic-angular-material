@@ -42,7 +42,7 @@ angular.module('piknikoApp')
 
     
   })
-.controller('FindPlaceCtrl', function ($scope, $state, $stateParams) {
+.controller('FindPlaceCtrl', function ($scope, $state, $stateParams, $window) {
     $scope.cities = [
 	    {city:'Taipei',image:'http://www.gapyearfamily.com/wp-content/uploads/2015/06/Taipei-with-kids-3.jpg'}, 
 	    {city:'Tokyo',image:'http://www.japan-guide.com/blog/sakura14/g/140326_tokyo_01.jpg'},
@@ -64,15 +64,64 @@ angular.module('piknikoApp')
     	{name:'花博公園', image:'https://placeimg.com/500/300/any', review:'4.5', setFav:false},
     ]
 
+
+    $scope.contentSize = function(index) {
+      var value = index + 3
+      if (value % 3 ===0 ){
+        $scope.ContentWidth = 100;
+      } else {
+        $scope.ContentWidth = 50;
+      }
+    }
+
+
+
     $scope.toggleFav = function(index, reason) {
     	var fav_or_not = $scope.places[index].setFav;
     	$scope.places[index].setFav = !$scope.places[index].setFav;
     }
 
     $scope.gotheplace = function(p, city){
+      console.log (p)
+      $window.localStorage.setItem('image', p.image);
+      $window.localStorage.setItem('review', p.review);
     	$state.go('place', { "city": city, "place": p.name})
     }
 
-    $scope.place = $stateParams.place
+    $scope.place = $stateParams.place;
+    $scope.sportImages = ['http://static.ettoday.net/images/466/d466951.jpg',
+    'https://c2.staticflickr.com/8/7024/6852146761_621313d5bf_z.jpg',
+    'http://static.flickr.com/30/62747513_23424e34b9.jpg']
+
+    $scope.zoomIn = function(index) {
+      console.log(index)
+    }
+
+    var imageUrl = $window.localStorage.getItem('image');
+    $scope.review = $window.localStorage.getItem('review');
+    $('.header').css({'background-image': 'url(' + imageUrl + ')'})
+
+    $('#wrapper').scroll(function(){
+      if ($(this).scrollTop() > 70 && $(this).scrollTop() < 200 ){
+        $('.header').addClass("medium");
+      }
+
+      else if ($(this).scrollTop() > 200 ){  
+        $('.header').addClass("smaller");
+        $('.placename').addClass("textalignc");
+      }
+      
+      else{
+        $('.header').removeClass("medium");
+        $('.header').removeClass("smaller");
+        $('.header').addClass('bgImg');
+        $('.header').css({'background-image': 'url(' + imageUrl + ')'});
+        $('.placename').removeClass('textalignc');
+
+      }
+    })
+
   })
+
+
 

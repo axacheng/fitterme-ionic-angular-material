@@ -1,20 +1,158 @@
-<div class="jumbotron">
-  <div class="menu" hide-gt-md ng-controller="SideNavCtrl">
-    <md-button class="md-icon-button" ng-click="goBack()">
-      <md-icon><i class="material-icons burgmenu">arrow_back</i></md-icon>
-    </md-button>
+<div id="wrapper">
+
+  <div class="header bgImg">
+    <div class="menu" hide-gt-md ng-controller="SideNavCtrl">
+      <md-button class="md-icon-button" ng-click="goBack()">
+        <md-icon><i class="material-icons burgmenu ishadow">arrow_back</i></md-icon>
+      </md-button>
+    </div>
+    <div class="placename">
+      <h3>{{ place }} </h3>
+    </div>
+    <div class="search">
+      <md-button class="md-icon-button" ng-click="toggleSearch()">
+        <md-icon ><i class="material-icons burgmenu ishadow">search</i></md-icon>
+      </md-button>
+    </div>
   </div>
-  <div class="mtbm10">
-    <h3>{{ place }} </h3>
+  <div flex ng-cloak class="mt300">
+      <div layout="row" class="mt15">
+        <div flex>
+          <div layout="row" layout-wrap>
+            <div flex="30">
+              <md-list-item class="pl0">
+                <md-icon><i class="material-icons green-txt ishadow">person_pin_circle</i></md-icon> 
+              </md-list-item>
+            </div>
+            <div flex="70">
+              <md-list-item class="md-2-line pl0">
+                <div class="md-list-item-text">
+                  <h3 class="fbold"> 10230</h3>
+                  <p>here</p>
+                </div>
+              </md-list-item>
+            </div>
+          </div>
+        </div>
+        <div flex >
+          <div layout="row" layout-wrap>
+            <div flex="30">
+              <md-list-item class="pl0">
+                <md-icon><i class="material-icons red-txt ishadow">favorites</i></md-icon> 
+              </md-list-item>
+            </div>
+            <div flex="70">
+              <md-list-item class="md-2-line pl0">
+                <div class="md-list-item-text">
+                  <h3 class="fbold"> 400888 </h3>
+                  <p>collected</p>
+                </div>
+              </md-list-item>
+            </div>
+          </div>
+        </div>
+        <div flex>
+          <div layout="row" layout-wrap>
+            <div flex="30">
+              <md-list-item class="pl0">
+                <md-icon><i class="material-icons amber-txt ishadow">star</i></md-icon>
+              </md-list-item>
+            </div>
+            <div flex="70">
+              <md-list-item class="md-2-line pl0">
+                <div class="md-list-item-text">
+                  <h3 class="fbold">  {{ review }} </h3>
+                  <p>review</p>
+                </div>
+              </md-list-item>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div layout="row">
+        <h2>Place Info</h2>
+      </div>
+      <div id="main">
+        <div id="content">
+          <section>
+              <div class="container">
+                  <h1>Header Resize On Scroll with Animations</h1>
+                  <p>Cupcake ipsum dolor sit amet lollipop. Macaroon candy cotton candy bear claw macaroon carrot cake pastry icing dessert. Cupcake pastry tart sesame snaps lollipop donut pie. Cookie apple pie toffee lemon drops jelly beans cheesecake sweet roll. Jelly-o soufflé donut candy canes wafer dragée sweet cheesecake. Macaroon caramels pie cookie gummi bears. Ice cream jelly-o toffee cookie gingerbread cookie. Soufflé fruitcake jelly-o jelly chupa chups jelly beans. Dragée marzipan pastry macaroon oat cake muffin soufflé topping liquorice. Jelly-o chocolate cake lollipop.</p>
+                  <p>Sugar plum muffin cookie pastry oat cake icing candy canes chocolate. Gummi bears chupa chups fruitcake dessert jelly. Muffin cookie ice cream soufflé pastry lollipop gingerbread sweet. Unerdwear.com bonbon candy marzipan bonbon gummies chocolate cake gummi bears powder. Unerdwear.com tart halvah chocolate cake dragée liquorice. Sugar plum chocolate bar pastry liquorice dragée jelly powder. Jelly tootsie roll applicake caramels. Marzipan candy tootsie roll donut. Gummies ice cream macaroon applicake.</p>
+                  <p>
+                      <a href="http://www.callmenick.com/tutorials/create-an-animated-resizing-header-on-scroll">&laquo; Go back to this tutorial?</a><br>
+                      <a href="http://www.callmenick.com/tutorials">&laquo; Go back to all tutorials?</a>
+                  </p>
+              </div>
+          </section>
+          <section class="color">
+              <div class="container">
+                  <h1>Cupcakes for the people!</h1>
+                  <p>Cupcake ipsum dolor sit amet lollipop. Macaroon candy cotton candy bear claw macaroon carrot cake pastry icing dessert. Cupcake pastry tart sesame snaps lollipop donut pie. Cookie apple pie toffee lemon drops jelly beans cheesecake sweet roll. Jelly-o soufflé donut candy canes wafer dragée sweet cheesecake. Macaroon caramels pie cookie gummi bears. Ice cream jelly-o toffee cookie gingerbread cookie. Soufflé fruitcake jelly-o jelly chupa chups jelly beans. Dragée marzipan pastry macaroon oat cake muffin soufflé topping liquorice. Jelly-o chocolate cake lollipop.</p>
+                  <p>Sugar plum muffin cookie pastry oat cake icing candy canes chocolate. Gummi bears chupa chups fruitcake dessert jelly. Muffin cookie ice cream soufflé pastry lollipop gingerbread sweet. Unerdwear.com bonbon candy marzipan bonbon gummies chocolate cake gummi bears powder. Unerdwear.com tart halvah chocolate cake dragée liquorice. Sugar plum chocolate bar pastry liquorice dragée jelly powder. Jelly tootsie roll applicake caramels. Marzipan candy tootsie roll donut. Gummies ice cream macaroon applicake.</p>
+              </div>
+          </section>
+          <section>
+              <div class="container">
+                  <h1>Chocolate, vanilla, and red velvet</h1>
+                  <p>Cupcake ipsum dolor sit amet lollipop. Macaroon candy cotton candy bear claw macaroon carrot cake pastry icing dessert. Cupcake pastry tart sesame snaps lollipop donut pie. Cookie apple pie toffee lemon drops jelly beans cheesecake sweet roll. Jelly-o soufflé donut candy canes wafer dragée sweet cheesecake. Macaroon caramels pie cookie gummi bears. Ice cream jelly-o toffee cookie gingerbread cookie. Soufflé fruitcake jelly-o jelly chupa chups jelly beans. Dragée marzipan pastry macaroon oat cake muffin soufflé topping liquorice. Jelly-o chocolate cake lollipop.</p>
+                  <p>Sugar plum muffin cookie pastry oat cake icing candy canes chocolate. Gummi bears chupa chups fruitcake dessert jelly. Muffin cookie ice cream soufflé pastry lollipop gingerbread sweet. Unerdwear.com bonbon candy marzipan bonbon gummies chocolate cake gummi bears powder. Unerdwear.com tart halvah chocolate cake dragée liquorice. Sugar plum chocolate bar pastry liquorice dragée jelly powder. Jelly tootsie roll applicake caramels. Marzipan candy tootsie roll donut. Gummies ice cream macaroon applicake.</p>
+              </div>
+          </section>
+          <section class="color">
+              <div class="container">
+                  <h1>Come to me!</h1>
+                  <p>Cupcake ipsum dolor sit amet lollipop. Macaroon candy cotton candy bear claw macaroon carrot cake pastry icing dessert. Cupcake pastry tart sesame snaps lollipop donut pie. Cookie apple pie toffee lemon drops jelly beans cheesecake sweet roll. Jelly-o soufflé donut candy canes wafer dragée sweet cheesecake. Macaroon caramels pie cookie gummi bears. Ice cream jelly-o toffee cookie gingerbread cookie. Soufflé fruitcake jelly-o jelly chupa chups jelly beans. Dragée marzipan pastry macaroon oat cake muffin soufflé topping liquorice. Jelly-o chocolate cake lollipop.</p>
+                  <p>Sugar plum muffin cookie pastry oat cake icing candy canes chocolate. Gummi bears chupa chups fruitcake dessert jelly. Muffin cookie ice cream soufflé pastry lollipop gingerbread sweet. Unerdwear.com bonbon candy marzipan bonbon gummies chocolate cake gummi bears powder. Unerdwear.com tart halvah chocolate cake dragée liquorice. Sugar plum chocolate bar pastry liquorice dragée jelly powder. Jelly tootsie roll applicake caramels. Marzipan candy tootsie roll donut. Gummies ice cream macaroon applicake.</p>
+              </div>
+          </section>
+          <section>
+              <div class="container">
+                  <h1>Sugar rush, oh my...</h1>
+                  <p>Cupcake ipsum dolor sit amet lollipop. Macaroon candy cotton candy bear claw macaroon carrot cake pastry icing dessert. Cupcake pastry tart sesame snaps lollipop donut pie. Cookie apple pie toffee lemon drops jelly beans cheesecake sweet roll. Jelly-o soufflé donut candy canes wafer dragée sweet cheesecake. Macaroon caramels pie cookie gummi bears. Ice cream jelly-o toffee cookie gingerbread cook
+                  ie. Soufflé fruitcake jelly-o jelly chupa chups jelly beans. Dragée marzipan pastry macaroon oat cake muffin soufflé topping liquorice. Jelly-o chocolate cake lollipop.</p>
+                  <p>Sugar plum muffin cookie pastry oat cake icing candy canes chocolate. Gummi bears chupa chups fruitcake dessert jelly. Muffin cookie ice cream soufflé pastry lollipop gingerbread sweet. Unerdwear.com bonbon candy marzipan bonbon gummies chocolate cake gummi bears powder. Unerdwear.com tart halvah chocolate cake dragée liquorice. Sugar plum chocolate bar pastry liquorice dragée jelly powder. Jelly tootsie roll applicake caramels. Marzipan candy tootsie roll donut. Gummies ice cream macaroon applicake.</p>
+              </div>
+          </section>
+        </div>
+      </div>
+  </div><!-- #main -->
+  <!--action button-->
+  <div class="br">
+    <md-fab-speed-dial md-direction="up" md-open="false"
+                       class="md-fling ">
+      <md-fab-trigger>
+        <md-button aria-label="check" class="md-fab cyan-bg">
+          <md-tooltip md-direction="left" md-visible="tooltipVisible">Check</md-tooltip>
+          <md-icon aria-label="check"><i class="material-icons light-txt">done</i></md-icon>
+        </md-button>
+      </md-fab-trigger>
+      <md-fab-actions>
+          <md-button aria-label="here" class="md-fab md-raised md-mini green-bg"
+                     ng-click="demo.openDialog($event, item)">
+            <md-tooltip md-direction="left" md-visible="tooltipVisible"
+                        md-autohide="false">
+              I am here
+            </md-tooltip>
+              <md-icon aria-label=" here"><i class="material-icons light-txt">person_pin_circle</i></md-icon> 
+          </md-button>
+          <md-button aria-label="collect" class="md-fab red-bg md-raised md-mini"
+                     ng-click="demo.openDialog($event, item)">
+            <md-tooltip md-direction="left" md-visible="tooltipVisible"
+                        md-autohide="false">
+              Add my collection
+            </md-tooltip>
+              <md-icon aria-label="collect"><i class="material-icons light-txt">favorites</i></md-icon> 
+          </md-button>
+          <md-button aria-label="review" class="md-fab amber-bg md-raised md-mini"
+                     ng-click="demo.openDialog($event, item)">
+            <md-tooltip md-direction="left" md-visible="tooltipVisible"
+                        md-autohide="false">
+              Review here
+            </md-tooltip>
+              <md-icon aria-label="collect"><i class="material-icons light-txt">star</i></md-icon> 
+          </md-button>
+      </md-fab-actions>
+    </md-fab-speed-dial>
   </div>
-  <div class="search">
-    <md-button class="md-icon-button" ng-click="toggleSearch()">
-      <md-icon ><i class="material-icons burgmenu">search</i></md-icon>
-    </md-button>
-  </div>
-</div>
-<div flex ng-cloak class="pa10">
-   <div layout="row" layout-wrap>
-      {{ place }}
-   </div>
 </div>

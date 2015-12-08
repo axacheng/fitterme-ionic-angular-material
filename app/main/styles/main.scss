@@ -4,17 +4,32 @@ in ionic's _variables.scss file.
 
 For example, you might change some of the default colors:
 */
-
+$red:                             #F44336 !default;
+$pink:                            #E91E63 !default;
+$purple:                          #9C27B0 !default;
+$deeppurple:                      #673AB7 !default;
+$indigo:                          #3F51B5 !default;
+$blue:                            #2196F3 !default;
+$lightblue:                       #03A9F4 !default;
+$cyan:                            #00BCD4 !default;
+$teal:                            #009688 !default;
+$green:                           #4CAF50 !default;
+$lightgreen:                      #8BC34A !default;
+$lime:                            #CDDC39 !default;
+$yellow:                          #FFEB3B !default;
+$amber:                           #FFC107 !default;
+$orange:                          #FF9800 !default;
+$deeporange:                      #FF5722 !default;
+$brown:                           #795548 !default;
+$grey:                            #9e9e9e !default;
+$bluegrey:                        #607D8B !default;
+$black:                           #000 !default;
 $light:                           #fff !default;
 $stable:                          #f8f8f8 !default;
-$positive:                        #4a87ee !default;
+
 $calm:                            #81d8d0 !default;
-$balanced:                        #66cc33 !default;
 $energized:                       #f0b840 !default;
-$assertive:                       #F44336 !default;
-$royal:                           #8a6de9 !default;
 $dark:                            #444 !default;
-$amber: 						  #FFC107 !default;
 $earth:                           #706662 !default;
 $alpha:                           0.8 !default;
 
@@ -40,15 +55,16 @@ body {
   color: $amber;
 }
 .menu, .search {
-  position: absolute;
+  position: fixed;
   top: 2px;
+  z-index: 999;
 }
 .menu {
-  left: 10px;
+  left: 2px;
 }
 
 .search {
-  right: 10px;
+  right: 2px;
 }
 
 
@@ -104,6 +120,9 @@ body {
   padding: 10px;
 }
 
+.mt300 {
+  margin-top: 300px;
+}
 
 
 .titlebar {
@@ -117,13 +136,14 @@ body {
 }
 
 .cityimage {
-   display: block;
+    display: block;
     width: 100%;
     position: relative;
     height: 0;
     padding: 60% 0 0 0;
     overflow: hidden;
 }
+
 
 .cityimage-inner {
     position: absolute;
@@ -156,13 +176,72 @@ body {
   cursor: pointer;
 }
 
+.mt15 {
+  margin-top: 15px;
+}
+
 .mtbm10 {
 	margin-top: -10px;
 	margin-bottom: -10px;
 }
 
+.light-txt{
+  color: $light !important;
+}
+
+.cyan-txt {
+  color: $cyan !important;
+}
+
+.cyan-bg {
+  background-color: $cyan !important;
+}
+
+.calm-txt {
+	color: $calm !important;
+}
+
+.calm-bg {
+  background-color: $calm !important;
+}
+
 .amber-txt {
-	color: $amber;
+  color: $amber !important;
+}
+
+.amber-bg {
+  background-color: $amber !important;
+}
+
+.earth-txt {
+  color: $earth !important;
+}
+
+.earth-bg {
+  background-color: $earth !important;
+}
+
+.red-txt {
+  color: $red !important;
+}
+
+.red-bg {
+  background-color: $red !important;
+}
+
+.purple-txt {
+  color: $purple !important;
+}
+
+.purple-bg {
+  background-color: $purple !important;
+}
+
+.green-txt {
+  color: $green !important;
+}
+.green-bg {
+  background-color: $green !important;
 }
 
 .topright {
@@ -173,7 +252,7 @@ body {
 }
 
 .fav {
-	color: $assertive;
+	color: $red;
 }
 
 .unfav {
@@ -186,4 +265,189 @@ body {
 
 .pointer {
 	cursor: pointer;
+}
+
+.hcarousel {
+  height: 300px;
+}
+
+.slideactive {
+  color: $amber;
+}
+
+.slideother {
+  color: $earth;
+}
+
+
+.custom-indicator {
+  position: relative;
+  text-align: center;
+  width: 100%;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin: -50px auto;
+}
+
+.bdstable {
+  border: 1px solid $stable;
+}
+
+.fbold {
+  font-weight: bold !important;
+}
+
+.ishadow {
+  text-shadow: 1px 1px 1px $dark;
+}
+
+.header {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    // left: 0;
+    z-index: 999;
+    background-color: $earth;
+    -webkit-transition: ease-in-out, height 1.5s ease-in-out;
+    -moz-transition: ease-in-out, height 1.5s ease-in-out;
+    -ms-transition: ease-in-out, height 1.5s ease-in-out;
+    -o-transition: ease-in-out, height 1.5s ease-in-out;
+    transition: ease-in-out, height 1.5s ease-in-out;
+}
+
+.bgImg {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.placename {
+    z-index: 9999;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    /* margin: 0 20px; */
+    font-size: 25px;
+    background: rgba(255,255,255,0.5);
+    width: 100%;
+    padding-left: 20px;
+    color: $black;
+
+}
+
+.fl {
+  float: left;
+}
+
+.clearfix {
+  clear: both; 
+}
+// .header h1 #logo {
+//     display: inline-block;
+//     height: 300px;
+//     line-height: 300px;
+//     float: left;
+//     font-family: "Oswald", sans-serif;
+//     font-size: 60px;
+//     color: white;
+//     font-weight: 400;
+//     -webkit-transition: all 0.5s;
+//     -moz-transition: all 0.5s;
+//     -ms-transition: all 0.5s;
+//     -o-transition: all 0.5s;
+//     transition: all 0.5s;
+// }
+
+// .header nav {
+//     display: inline-block;
+//     float: right;
+// }
+// .header nav a {
+//     line-height: 150px;
+//     margin-left: 20px;
+//     color: #9fdbfc;
+//     font-weight: 700;
+//     font-size: 18px;
+//     -webkit-transition: all 0.3s;
+//     -moz-transition: all 0.3s;
+//     -ms-transition: all 0.3s;
+//     -o-transition: all 0.3s;
+//     transition: all 0.3s;
+// }
+// .header nav a:hover {
+//     color: white;
+// }
+.header.medium {
+    height: 120px;
+}
+
+.header.smaller {
+    height: 75px;
+}
+// .header.smaller h1#logo {
+//     width: 150px;
+//     height: 75px;
+//     line-height: 75px;
+//     font-size: 30px;
+// }
+// .header.smaller nav a {
+//     line-height: 75px;
+// }
+
+
+.textalignl {
+  text-align: left;
+}
+
+.textalignc {
+  text-align: center;
+  padding-left: 0px !important;
+}
+
+@media(min-width: 960px) {
+
+  .textalignc {
+    text-align: left;
+    padding-left: 20px;
+  }
+}
+
+
+@media (max-width: 600px) {
+  .header {
+    height: 250px;
+  }
+  .header.smaller {
+    height: 60px;
+  }
+  .placename {
+    font-size: 18px;
+  }
+  .mt300 {
+    margin-top: 250px;
+  }
+}
+
+.pl0 {
+  padding-left: 0 !important;
+}
+
+#wrapper {
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  position: absolute;
+  overflow: auto;
+  margin: 0 auto; 
+}
+
+.br {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 999;
 }

@@ -8,6 +8,7 @@ angular.module('piknikoApp', [
   'ngAnimate',
   'ngMaterial',
   'angular-jwt',
+  'angular-carousel',
   // TODO: load other modules selected during generation
 ])
 

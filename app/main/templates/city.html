@@ -1,7 +1,7 @@
 <div class="jumbotron">
   <div class="menu" hide-gt-md ng-controller="SideNavCtrl">
     <md-button class="md-icon-button" ng-click="goBack()">
-      <md-icon><i class="material-icons burgmenu">arrow_back</i></md-icon>
+      <md-icon><i class="material-icons burgmenu ishadow">arrow_back</i></md-icon>
     </md-button>
   </div>
   <div class="mtbm10">
@@ -9,28 +9,29 @@
   </div>
   <div class="search">
     <md-button class="md-icon-button" ng-click="toggleSearch()">
-      <md-icon ><i class="material-icons burgmenu">search</i></md-icon>
+      <md-icon ><i class="material-icons burgmenu ishadow">search</i></md-icon>
     </md-button>
   </div>
 </div>
 <div flex ng-cloak class="pa10">
-   <div layout="row" layout-wrap>
-      <div flex-gt-md="25" flex-md="50" flex-sm="100" ng-repeat="p in places">
-        <md-card class="pointer">
-          <div class="cityimage">
-            <img ng-src="{{p.image}}" class="md-card-image cityimage-inner" alt="{{p.name}}"  ng-click="gotheplace(p, city)">
-            <md-button class="md-icon-button topright" aria-label="Favorite" ng-click="toggleFav($index, 'like')">
-              <md-icon><i class="material-icons" ng-class="{'fav': p.setFav, 'unfav':!p.setFav}">favorites</i></md-icon>
-            </md-button>
-          </div>
-          <md-card-content  ng-click="gotheplace(p, city)">
-              <div>{{p.name}}</div>
-              <div layout="row" layout-align="start end">
-                  <small> {{p.review}}</small>
-                  <i class="material-icons amber-txt">star</i>
-              </div>  
-          </md-card-content>
-        </md-card>
-      </div>
-   </div>
+    <div layout="row" layout-wrap >
+        <div flex="{{ContentWidth}}"  ng-repeat="p in places" ng-model="contentSize($index)">
+          <md-card class="pointer">
+            <div class="cityimage">
+              <img ng-src="{{p.image}}" class="md-card-image cityimage-inner" alt="{{p.name}}"  ng-click="gotheplace(p, city)">
+              <md-button class="md-icon-button topright" aria-label="Favorite" ng-click="toggleFav($index, 'like')">
+                <md-icon><i class="material-icons ishadow" ng-class="{'fav': p.setFav, 'unfav':!p.setFav}">favorites</i></md-icon>
+              </md-button>
+            </div>
+            <md-card-content  ng-click="gotheplace(p, city)">
+                <div>{{p.name}}</div>
+                <div layout="row" layout-align="start end">
+                    <small> {{p.review}}</small>
+                    <i class="material-icons amber-txt">star</i>
+                </div>  
+            </md-card-content>
+          </md-card>
+        </div>
+    </div>
+
 </div>
